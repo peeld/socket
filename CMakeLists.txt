@@ -3,15 +3,15 @@ project(PeelSocket)
 
 set(CMAKE_CXX_STANDARD 17)
 set(SRCS 
-	peel/socket/address.cpp
-	peel/socket/address.h
-	peel/socket/defines.h
-	peel/socket/error.cpp
-	peel/socket/error.h
-	peel/socket/socketbase.cpp
-	peel/socket/socketbase.h
-	peel/socket/udp.cpp
-	peel/socket/udp.h)
+	peel/net/address.cpp
+	peel/net/address.h
+	peel/net/defines.h
+	peel/net/error.cpp
+	peel/net/error.h
+	peel/net/socketbase.cpp
+	peel/net/socketbase.h
+	peel/net/udp.cpp
+	peel/net/udp.h)
 
 set(socket_target PeelSocket)
 add_library(${socket_target} ${SRCS})
