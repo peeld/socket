@@ -1,7 +1,7 @@
 #include "error.h"
 #include <sstream>
 
-using namespace peel::net;
+using namespace peel::socket;
 
 Error::Error(std::string s) : m_str(s), m_err(0)
 {};

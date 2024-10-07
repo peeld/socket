@@ -6,7 +6,7 @@
 
 namespace peel
 {
-	namespace net {
+	namespace socket {
 		
 		//! Thrown by Socket
 		class Error

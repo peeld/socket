@@ -8,13 +8,13 @@
 
 namespace peel
 {
-	namespace net {
+	namespace socket {
 
 		class Udp : public SocketBase
 		{
 		public:
 			Udp();
-			virtual bool Create() override;
+			virtual bool Create();
 			size_t GetDatagram(char* msg, int maxLen, Address& m_from);
 			void   SendDatagram(const char* msg, int len, const Address& to);
 		};

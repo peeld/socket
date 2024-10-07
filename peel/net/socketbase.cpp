@@ -1,23 +1,33 @@
-#ifdef _WIN32
+#ifdef WIN32
 
 #include "socketbase.h"
 #include "error.h"
 
-using namespace peel::net;
+using namespace peel::socket;
 
 WSADATA gWsaData;
 
-bool Init()
+bool peel::socket::Init()
 {
 	int i = WSAStartup(MAKEWORD(2, 2), &gWsaData);
 	return i == 0;
 }
 
-bool Cleanup()
+bool peel::socket::Cleanup()
 {
 	return WSACleanup() == 0;
 }
 #endif
+
+
+bool SocketBase::Connected()
+{
+	if (m_socket == SOCKET_NULL || m_socket == INVALID_SOCKET) {
+		return false;
+	}
+
+	return true;
+}
 
 void SocketBase::Close()
 {
@@ -30,12 +40,6 @@ void SocketBase::Close()
 
 void SocketBase::Bind(unsigned short port)
 {
-	if (m_socket != SOCKET_NULL) {
-		Close();
-	}
-	
-	Create();
-
 	struct sockaddr_in service;
 	memset(&service, 0, sizeof(sockaddr_in));
 	service.sin_family = AF_INET;
