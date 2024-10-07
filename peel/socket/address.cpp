@@ -1,6 +1,6 @@
 #include "address.h"
 
-using namespace peel::net;
+using namespace peel::socket;
 
 Address::Address()
 {

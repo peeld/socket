@@ -5,7 +5,7 @@
 
 namespace peel
 {
-	namespace net 
+	namespace socket 
 	{
 
 #ifdef _WIN32
@@ -17,8 +17,6 @@ namespace peel
 		{
 		public:
 
-			virtual bool Create() = 0;
-
 			void    Close();
 
 			void    Bind(unsigned short port);
@@ -27,6 +25,8 @@ namespace peel
 
 			//! Returns platform error - errno or WSAGetLastError()
 			static int GetError();
+
+			bool Connected();
 
 			SOCKET m_socket;
 		};
