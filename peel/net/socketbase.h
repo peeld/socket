@@ -5,7 +5,7 @@
 
 namespace peel
 {
-	namespace socket 
+	namespace net 
 	{
 
 #ifdef _WIN32

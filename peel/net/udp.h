@@ -8,7 +8,7 @@
 
 namespace peel
 {
-	namespace socket {
+	namespace net {
 
 		class Udp : public SocketBase
 		{

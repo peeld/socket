@@ -3,7 +3,7 @@
 #include "defines.h"
 #include "error.h"
 
-using namespace peel::socket;
+using namespace peel::net;
 
 Udp::Udp()
 {

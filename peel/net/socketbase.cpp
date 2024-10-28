@@ -3,17 +3,17 @@
 #include "socketbase.h"
 #include "error.h"
 
-using namespace peel::socket;
+using namespace peel::net;
 
 WSADATA gWsaData;
 
-bool peel::socket::Init()
+bool ::peel::net::Init()
 {
 	int i = WSAStartup(MAKEWORD(2, 2), &gWsaData);
 	return i == 0;
 }
 
-bool peel::socket::Cleanup()
+bool ::peel::net::Cleanup()
 {
 	return WSACleanup() == 0;
 }

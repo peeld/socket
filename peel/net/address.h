@@ -6,7 +6,7 @@
 
 namespace peel
 {
-	namespace socket
+	namespace net
 	{
 		class Address
 		{
